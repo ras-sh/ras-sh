@@ -1,0 +1,12 @@
+{
+  // File associations
+  "files.associations": {
+    "**/.env**": "properties"
+  },
+  // Formatting
+  "editor.tabSize": 2,
+  "editor.defaultFormatter": "biomejs.biome",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports.biome": "always"
+  }
+}
