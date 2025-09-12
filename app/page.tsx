@@ -20,16 +20,15 @@ export default function Home() {
 
           <h1 className="text-6xl font-bold tracking-tight text-zinc-100">ras.sh</h1>
 
-          <p className="text-xl text-zinc-400 max-w-2xl mx-auto leading-relaxed">
+          {/* <p className="text-xl text-zinc-400 max-w-2xl mx-auto leading-relaxed">
             Developer tools delivered as a single npm package. Install once, access everything.
-          </p>
+          </p> */}
         </div>
 
         {/* Installation Command */}
-        <section className="space-y-6">
+        {/* <section className="space-y-6">
           <div className="max-w-2xl mx-auto">
             <div className="bg-zinc-950 border border-zinc-800 rounded-lg overflow-hidden shadow-2xl">
-              {/* Terminal Header */}
               <div className="bg-zinc-900 border-b border-zinc-800 px-4 py-3 flex items-center gap-2">
                 <div className="flex gap-1.5">
                   <div className="w-3 h-3 bg-red-500 rounded-full" />
@@ -39,7 +38,6 @@ export default function Home() {
                 <div className="text-zinc-400 text-sm font-mono ml-2">terminal</div>
               </div>
 
-              {/* Terminal Content */}
               <div className="p-6">
                 <div className="flex items-center gap-4">
                   <span className="text-green-400 font-mono text-sm">$</span>
@@ -51,10 +49,10 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* CLI Tools */}
-        <section className="space-y-8">
+        {/* <section className="space-y-8">
           <div className="flex justify-center">
             {CLI_TOOLS.map((tool, index) => (
               <div
@@ -72,7 +70,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-        </section>
+        </section> */}
       </main>
     </div>
   );
