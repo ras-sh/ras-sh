@@ -1,24 +1,27 @@
-import { Copy, Database, Terminal } from 'lucide-react';
+import { Terminal } from "lucide-react";
 
-const CLI_TOOLS = [
+const _CLI_TOOLS = [
   {
-    name: 'create-convex-app',
-    description: 'Scaffold a Convex app with opinionated defaults, auth choices, and frontend frameworks',
+    name: "create-convex-app",
+    description:
+      "Scaffold a Convex app with opinionated defaults, auth choices, and frontend frameworks",
   },
 ];
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center px-8 py-12">
+    <div className="flex min-h-screen flex-col items-center justify-center px-8 py-12">
       {/* Main Content */}
-      <main className="space-y-16 max-w-lg mx-auto">
+      <main className="mx-auto max-w-lg space-y-16">
         {/* Terminal Icon and Title */}
         <div className="space-y-6 text-center">
           <div className="flex justify-center">
-            <Terminal size={80} className="text-zinc-100" />
+            <Terminal className="text-zinc-100" size={80} />
           </div>
 
-          <h1 className="text-6xl font-bold tracking-tight text-zinc-100">ras.sh</h1>
+          <h1 className="font-bold text-6xl text-zinc-100 tracking-tight">
+            ras.sh
+          </h1>
 
           {/* <p className="text-xl text-zinc-400 max-w-2xl mx-auto leading-relaxed">
             Developer tools delivered as a single npm package. Install once, access everything.
