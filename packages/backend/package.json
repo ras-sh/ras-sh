@@ -1,0 +1,17 @@
+{
+  "name": "@ras.sh/backend",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "convex dev",
+    "dev:setup": "convex dev --configure --until-success"
+  },
+  "dependencies": {
+    "@convex-dev/better-auth": "^0.8.6",
+    "better-auth": "1.3.8",
+    "convex": "^1.27.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.5.2",
+    "typescript": "^5.9.2"
+  }
+}

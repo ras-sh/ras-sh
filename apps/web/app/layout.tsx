@@ -1,6 +1,7 @@
 import { cn } from "@ras.sh/ui/lib/utils";
 import { Geist, Geist_Mono } from "next/font/google";
 import "@ras.sh/ui/globals.css";
+import { Providers } from "@/components/providers";
 
 const fontSans = Geist({
   subsets: ["latin"],
@@ -26,7 +27,7 @@ export default function RootLayout({
           "dark min-h-dvh font-mono antialiased"
         )}
       >
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

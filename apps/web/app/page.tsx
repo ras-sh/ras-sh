@@ -1,3 +1,7 @@
+"use client";
+
+import { api } from "@ras.sh/backend/convex/_generated/api";
+import { useQuery } from "convex/react";
 import { Terminal } from "lucide-react";
 
 const _CLI_TOOLS = [
@@ -9,6 +13,9 @@ const _CLI_TOOLS = [
 ];
 
 export default function Home() {
+  const healthCheck = useQuery(api.healthCheck.get);
+  console.log(healthCheck);
+
   return (
     <div className="flex min-h-screen flex-col items-center justify-center px-8 py-12">
       {/* Main Content */}
