@@ -1,5 +1,6 @@
-export const GITHUB_PREFIX = "ras-sh/";
-export const NPM_PREFIX = "@ras-sh/";
+export const ORG = "ras-sh";
+export const GITHUB_PREFIX = `${ORG}/`;
+export const NPM_PREFIX = `@${ORG}/`;
 
 export const LIBRARIES = [
   {
