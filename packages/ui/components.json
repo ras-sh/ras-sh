@@ -11,10 +11,10 @@
   },
   "iconLibrary": "lucide",
   "aliases": {
-    "components": "@ras.sh/ui/components",
-    "utils": "@ras.sh/ui/lib/utils",
-    "hooks": "@ras.sh/ui/hooks",
-    "lib": "@ras.sh/ui/lib",
-    "ui": "@ras.sh/ui/components"
+    "components": "@ras-sh/ui/components",
+    "utils": "@ras-sh/ui/lib/utils",
+    "hooks": "@ras-sh/ui/hooks",
+    "lib": "@ras-sh/ui/lib",
+    "ui": "@ras-sh/ui/components"
   }
 }

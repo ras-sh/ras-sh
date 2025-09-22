@@ -4,17 +4,17 @@
   "private": true,
   "homepage": "https://ras.sh",
   "bugs": {
-    "url": "https://github.com/richardsolomou/ras.sh/issues",
-    "email": "richard@solomou.dev"
+    "url": "https://github.com/ras-sh/ras.sh/issues",
+    "email": "hi@ras.sh"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/richardsolomou/ras.sh"
+    "url": "https://github.com/ras-sh/ras.sh"
   },
   "license": "MIT",
   "author": {
     "name": "Richard Solomou",
-    "email": "richard@solomou.dev",
+    "email": "hi@ras.sh",
     "url": "https://ras.sh"
   },
   "scripts": {
@@ -27,12 +27,12 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^2.2.4",
-    "@ras.sh/typescript-config": "workspace:*",
+    "@ras-sh/typescript-config": "workspace:*",
     "@types/node": "^24.5.2",
     "lefthook": "^1.13.1",
     "turbo": "^2.5.6",
     "typescript": "^5.9.2",
-    "ultracite": "5.3.10"
+    "ultracite": "5.4.5"
   },
   "packageManager": "pnpm@10.15.1",
   "engines": {

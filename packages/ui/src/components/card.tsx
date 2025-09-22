@@ -1,4 +1,4 @@
-import { cn } from "@ras.sh/ui/lib/utils";
+import { cn } from "@ras-sh/ui/lib/utils";
 import type * as React from "react";
 
 function Card({ className, ...props }: React.ComponentProps<"div">) {

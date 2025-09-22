@@ -1,1 +1,1 @@
-export { default } from "@ras.sh/ui/postcss.config";
+export { default } from "@ras-sh/ui/postcss.config";

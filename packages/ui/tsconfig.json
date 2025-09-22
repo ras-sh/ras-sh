@@ -1,9 +1,9 @@
 {
-  "extends": "@ras.sh/typescript-config/react-library.json",
+  "extends": "@ras-sh/typescript-config/react-library.json",
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@ras.sh/ui/*": ["./src/*"]
+      "@ras-sh/ui/*": ["./src/*"]
     }
   },
   "include": ["."],
