@@ -1,16 +1,17 @@
 "use client";
 
 import { useNpmDownloadCounter } from "@erquhart/convex-oss-stats/react";
-import { api } from "@ras-sh/backend/convex/_generated/api";
-import { useQuery } from "convex/react";
+import type { api } from "@ras-sh/backend/convex/_generated/api";
+import { type Preloaded, usePreloadedQuery } from "convex/react";
 import { Download, Star } from "lucide-react";
 
 type OssStatsProps = {
   library: string;
+  preloadedStats: Preloaded<typeof api.ossStats.getStats>;
 };
 
-export const OssStats = ({ library }: OssStatsProps) => {
-  const stats = useQuery(api.ossStats.getStats, { library });
+export const OssStats = ({ preloadedStats }: OssStatsProps) => {
+  const stats = usePreloadedQuery(preloadedStats);
 
   // Use this hook to get a forecasted download count for an npm package or org
   const npmData = stats?.npm?.downloadCountUpdatedAt
