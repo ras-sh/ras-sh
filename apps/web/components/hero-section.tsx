@@ -5,7 +5,7 @@ export function HeroSection() {
   return (
     <div className="space-y-6 text-center">
       <div className="flex justify-center">
-        <Image alt="ras.sh" className="size-20" src={icon} />
+        <Image alt="ras.sh" className="size-24" src={icon} />
       </div>
 
       <h1 className="font-bold text-6xl text-zinc-100 tracking-tight">
