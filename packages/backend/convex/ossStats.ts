@@ -1,6 +1,6 @@
 import { OssStats } from "@erquhart/convex-oss-stats";
 import { v } from "convex/values";
-import { GITHUB_PREFIX, LIBRARIES, NPM_PREFIX } from "../constants";
+import { GITHUB_PREFIX, LIBRARIES, NPM_PREFIX, ORG } from "../constants";
 import { components } from "./_generated/api";
 import { query } from "./_generated/server";
 
@@ -8,6 +8,8 @@ const githubRepos = LIBRARIES.map((library) => `${GITHUB_PREFIX}${library.id}`);
 const npmPackages = LIBRARIES.map((library) => `${NPM_PREFIX}${library.id}`);
 
 export const ossStats = new OssStats(components.ossStats, {
+  githubOwners: [ORG],
+  npmOrgs: [ORG],
   githubRepos,
   npmPackages,
 });
