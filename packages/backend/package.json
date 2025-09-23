@@ -8,8 +8,8 @@
   },
   "dependencies": {
     "@erquhart/convex-oss-stats": "^0.8.1",
-    "@ras-sh/convex-cli": "^0.1.0",
-    "convex": "^1.27.2"
+    "@ras-sh/convex-cli": "^0.1.1",
+    "convex": "^1.27.3"
   },
   "devDependencies": {
     "@types/node": "^24.5.2",

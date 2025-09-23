@@ -1,5 +1,5 @@
 import { cn } from "@ras-sh/ui/lib/utils";
-import { DM_Mono } from "next/font/google";
+import { DM_Mono, DM_Sans } from "next/font/google";
 import "@ras-sh/ui/globals.css";
 import type { Metadata } from "next";
 import { Providers } from "@/components/providers";
@@ -8,6 +8,12 @@ const fontMono = DM_Mono({
   weight: ["300", "400", "500"],
   subsets: ["latin"],
   variable: "--font-mono",
+});
+
+const fontSans = DM_Sans({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+  variable: "--font-sans",
 });
 
 export const metadata: Metadata = {
@@ -83,6 +89,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
+          fontSans.variable,
           fontMono.variable,
           "dark min-h-dvh font-mono antialiased"
         )}

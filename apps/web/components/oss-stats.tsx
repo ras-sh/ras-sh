@@ -24,7 +24,7 @@ export const OssStats = ({ preloadedStats }: OssStatsProps) => {
   const liveNpmDownloadCount = useNpmDownloadCounter(npmData);
 
   return (
-    <div className="flex items-center space-x-6 text-sm text-zinc-400">
+    <div className="flex items-center space-x-6 text-sm text-zinc-400 transition-all duration-200 group-hover:text-zinc-300">
       <div className="flex items-center space-x-2">
         <Download className="size-4" />
         <span>{liveNpmDownloadCount.count || 0}</span>
