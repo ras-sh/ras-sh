@@ -3,9 +3,10 @@ import icon from "@/public/icon.svg";
 
 export function HeroSection() {
   return (
-    <div className="space-y-6 text-center">
+    <div className="relative space-y-3 py-10 text-center">
+      <div className="-z-1 absolute inset-0 mx-auto h-full w-full max-w-2xl bg-[url('/pattern.svg')] bg-center bg-contain bg-no-repeat" />
       <div className="flex justify-center">
-        <Image alt="ras.sh" className="size-24" src={icon} />
+        <Image alt="ras.sh" className="size-34" src={icon} />
       </div>
 
       <h1 className="font-bold text-6xl text-zinc-100 tracking-tight">
