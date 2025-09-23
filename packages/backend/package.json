@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "convex dev",
-    "dev:setup": "convex dev --configure --until-success"
+    "dev:setup": "convex dev --configure --until-success",
+    "cli": "npx tsx --env-file=.env.local src/cli.ts"
   },
   "dependencies": {
     "@erquhart/convex-oss-stats": "^0.8.1",
-    "convex": "^1.27.1"
+    "@ras-sh/convex-cli": "^0.1.0",
+    "convex": "^1.27.2"
   },
   "devDependencies": {
     "@types/node": "^24.5.2",
