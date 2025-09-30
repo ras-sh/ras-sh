@@ -5,7 +5,9 @@ import { components } from "./_generated/api";
 import { query } from "./_generated/server";
 
 const githubRepos = LIBRARIES.map((library) => `${GITHUB_PREFIX}${library.id}`);
-const npmPackages = LIBRARIES.map((library) => `${NPM_PREFIX}${library.id}`);
+const npmPackages = LIBRARIES.filter((library) => library.hasNpmPackage).map(
+  (library) => `${NPM_PREFIX}${library.id}`
+);
 
 export const ossStats = new OssStats(components.ossStats, {
   githubOwners: [ORG],
@@ -44,13 +46,16 @@ export const getStats = query({
       // Ignore error
     }
 
-    try {
-      npmData = await ossStats.getNpmPackage(
-        ctx,
-        `${NPM_PREFIX}${args.library}`
-      );
-    } catch {
-      // Ignore error
+    const libraryConfig = LIBRARIES.find((lib) => lib.id === args.library);
+    if (libraryConfig?.hasNpmPackage) {
+      try {
+        npmData = await ossStats.getNpmPackage(
+          ctx,
+          `${NPM_PREFIX}${args.library}`
+        );
+      } catch {
+        // Ignore error
+      }
     }
 
     return {

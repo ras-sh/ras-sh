@@ -10,6 +10,11 @@ const nextConfig = {
         permanent: false,
       },
       {
+        source: "/remove-bg",
+        destination: "https://remove-bg.ras.sh",
+        permanent: false,
+      },
+      {
         source: "/convex-cli",
         destination: "https://www.npmjs.com/package/@ras-sh/convex-cli",
         permanent: false,
