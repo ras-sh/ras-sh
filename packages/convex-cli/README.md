@@ -1,4 +1,4 @@
-![Convex CLI Banner](https://ras.sh/static/convex-cli.webp)
+![Convex CLI Banner](https://r2.ras.sh/banners/convex-cli.webp)
 
 # @ras-sh/convex-cli [![npm version](https://img.shields.io/npm/v/@ras-sh/convex-cli.svg)](https://www.npmjs.com/package/@ras-sh/convex-cli)
 
@@ -255,8 +255,8 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 ### Quick Development Setup
 
 ```bash
-git clone https://github.com/ras-sh/convex-cli.git
-cd convex-cli
+git clone https://github.com/ras-sh/ras-sh.git
+cd ras-sh/packages/convex-cli
 pnpm install
 pnpm test
 pnpm run build

@@ -12,8 +12,8 @@ Thank you for your interest in contributing to the Convex CLI! This guide will h
 ### Setup
 
 ```bash
-git clone git@github.com:ras-sh/convex-cli.git
-cd convex-cli
+git clone git@github.com:ras-sh/ras-sh.git
+cd ras-sh/packages/convex-cli
 pnpm install
 ```
 

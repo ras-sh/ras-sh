@@ -1,15 +1,17 @@
 {
-  "name": "ras.sh",
+  "name": "ras-sh",
   "version": "0.0.0",
+  "type": "module",
   "private": true,
+  "description": "A collection of side projects, experiments, and tools built with modern technologies.",
   "homepage": "https://ras.sh",
   "bugs": {
-    "url": "https://github.com/richardsolomou/ras.sh/issues",
+    "url": "https://github.com/ras-sh/ras-sh/issues",
     "email": "hi@ras.sh"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/richardsolomou/ras.sh"
+    "url": "https://github.com/ras-sh/ras-sh"
   },
   "license": "MIT",
   "author": {
@@ -18,24 +20,51 @@
     "url": "https://ras.sh"
   },
   "scripts": {
-    "build": "turbo build",
-    "dev": "turbo dev",
-    "lint": "turbo lint",
-    "check-types": "turbo check-types",
+    "build": "next build --turbopack",
+    "dev": "concurrently \"pnpm dev:frontend\" \"pnpm dev:backend\"",
+    "dev:frontend": "next dev --turbopack",
+    "dev:backend": "convex dev",
+    "export": "pnpm build && next export -o _static",
+    "start": "next start",
+    "check-types": "tsc --noEmit",
     "check": "ultracite check",
     "fix": "ultracite fix --unsafe"
   },
+  "dependencies": {
+    "@erquhart/convex-oss-stats": "^0.8.1",
+    "@icons-pack/react-simple-icons": "^13.8.0",
+    "@imgly/background-removal": "^1.7.0",
+    "@radix-ui/react-progress": "^1.1.7",
+    "@radix-ui/react-slot": "^1.2.3",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "convex": "^1.27.3",
+    "lucide-react": "^0.544.0",
+    "next": "^15.5.4",
+    "onnxruntime-web": "1.21.0-dev.20250206-d981b153d3",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-dropzone": "^14.3.8",
+    "tailwind-merge": "^3.3.1",
+    "tailwindcss-animate": "^1.0.7"
+  },
   "devDependencies": {
     "@biomejs/biome": "^2.2.5",
-    "@ras-sh/typescript-config": "workspace:*",
-    "@types/node": "catalog:",
+    "@tailwindcss/postcss": "^4.1.14",
+    "@tailwindcss/typography": "^0.5.19",
+    "@types/node": "^24.6.2",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "concurrently": "^9.2.1",
     "lefthook": "^1.13.6",
-    "turbo": "^2.5.8",
-    "typescript": "catalog:",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.14",
+    "tw-animate-css": "^1.4.0",
+    "typescript": "^5.9.3",
     "ultracite": "^5.5.0"
   },
-  "packageManager": "pnpm@10.17.1",
   "engines": {
     "node": ">=22"
-  }
+  },
+  "packageManager": "pnpm@10.17.1"
 }

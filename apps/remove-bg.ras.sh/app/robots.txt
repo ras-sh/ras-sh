@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://remove-bg.ras.sh/sitemap.xml
