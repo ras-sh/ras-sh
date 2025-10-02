@@ -13,6 +13,7 @@
       },
       "style": {
         "useFilenamingConvention": "off",
+        "useNamingConvention": "off",
         "noNestedTernary": "off",
         "noMagicNumbers": "off"
       },

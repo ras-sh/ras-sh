@@ -7,12 +7,12 @@
     "cli": "npx tsx --env-file=.env.local src/cli.ts"
   },
   "dependencies": {
-    "@erquhart/convex-oss-stats": "^0.8.1",
-    "@ras-sh/convex-cli": "^0.1.1",
-    "convex": "^1.27.3"
+    "@erquhart/convex-oss-stats": "catalog:",
+    "@ras-sh/convex-cli": "^0.1.3",
+    "convex": "catalog:"
   },
   "devDependencies": {
-    "@types/node": "^24.5.2",
-    "typescript": "^5.9.2"
+    "@types/node": "catalog:",
+    "typescript": "catalog:"
   }
 }

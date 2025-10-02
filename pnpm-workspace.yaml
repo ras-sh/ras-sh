@@ -1,3 +1,15 @@
 packages:
-  - "apps/*"
-  - "packages/*"
+  - apps/*
+  - packages/*
+
+catalog:
+  '@erquhart/convex-oss-stats': ^0.8.1
+  '@types/node': ^24.6.2
+  '@types/react': ^19.2.0
+  '@types/react-dom': ^19.2.0
+  convex: ^1.27.3
+  lucide-react: ^0.544.0
+  next: ^15.5.4
+  react: ^19.2.0
+  react-dom: ^19.2.0
+  typescript: ^5.9.3
