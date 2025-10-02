@@ -41,6 +41,12 @@ importers:
       onnxruntime-web:
         specifier: 1.21.0-dev.20250206-d981b153d3
         version: 1.21.0-dev.20250206-d981b153d3
+      posthog-js:
+        specifier: ^1.269.1
+        version: 1.269.1
+      posthog-node:
+        specifier: ^5.9.2
+        version: 5.9.2
       react:
         specifier: ^19.2.0
         version: 19.2.0
@@ -95,7 +101,7 @@ importers:
         version: 5.9.3
       ultracite:
         specifier: ^5.5.0
-        version: 5.5.0(@types/debug@4.1.12)(@types/node@24.6.2)(jiti@2.6.1)(lightningcss@1.30.1)(typescript@5.9.3)
+        version: 5.5.0(@types/debug@4.1.12)(@types/node@24.6.2)(typescript@5.9.3)
 
   packages/convex-cli:
     dependencies:
@@ -970,6 +976,9 @@ packages:
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
     engines: {node: '>=14'}
 
+  '@posthog/core@1.2.2':
+    resolution: {integrity: sha512-f16Ozx6LIigRG+HsJdt+7kgSxZTHeX5f1JlCGKI1lXcvlZgfsCR338FuMI2QRYXGl+jg/vYFzGOTQBxl90lnBg==}
+
   '@protobufjs/aspromise@1.1.2':
     resolution: {integrity: sha512-j+gKExEuLmKwvz3OgROXtrJ2UG2x8Ch2YZUxahh+s1F2HZ+wAceUNLkvy6zKCPVRkU++ZWQrdxsUeQXmcg4uoQ==}
 
@@ -1637,6 +1646,9 @@ packages:
       react:
         optional: true
 
+  core-js@3.45.1:
+    resolution: {integrity: sha512-L4NPsJlCfZsPeXukyzHFlg/i7IIVwHSItR0wg0FLNqYClJ4MQYTYLbC7EkjKYRLZF2iof2MUgN0EGy7MdQFChg==}
+
   cron-parser@4.9.0:
     resolution: {integrity: sha512-p0SaNjrHOnQeR8/VnfGbmg9te2kfyYSQ7Sc/j/6DtPL3JQvKxmjO9TSjNFpujqV3vEYYBvNNvXSxzyksBWAx1Q==}
     engines: {node: '>=12.0.0'}
@@ -1814,6 +1826,9 @@ packages:
     peerDependenciesMeta:
       picomatch:
         optional: true
+
+  fflate@0.4.8:
+    resolution: {integrity: sha512-FJqqoDBR00Mdj9ppamLa/Y7vxm+PRmNWA67N846RvsoYVMKB4q3y/de5PA7gUmRMYK/8CMz2GDZQmCRN1wBcWA==}
 
   file-selector@2.1.2:
     resolution: {integrity: sha512-QgXo+mXTe8ljeqUFaX3QVHc5osSItJ/Km+xpocx0aSqWGMSCf6qYs/VnzZgS864Pjn5iceMRFigeAV7AfTlaig==}
@@ -2363,6 +2378,24 @@ packages:
     resolution: {integrity: sha512-3Ybi1tAuwAP9s0r1UQ2J4n5Y0G05bJkpUIO0/bI9MhwmD70S5aTWbXGBwxHrelT+XM1k6dM0pk+SwNkpTRN7Pg==}
     engines: {node: ^10 || ^12 || >=14}
 
+  posthog-js@1.269.1:
+    resolution: {integrity: sha512-4GrcKQ89uLwBGNtHrhq5QRCzHmPPCxE6i0cDsk4mFMls9iZcsdTpITBNepHbP0Bvn62HZUVAiqGeRlOpy8XeCA==}
+    peerDependencies:
+      '@rrweb/types': 2.0.0-alpha.17
+      rrweb-snapshot: 2.0.0-alpha.17
+    peerDependenciesMeta:
+      '@rrweb/types':
+        optional: true
+      rrweb-snapshot:
+        optional: true
+
+  posthog-node@5.9.2:
+    resolution: {integrity: sha512-oU7FbFcH5cn40nhP04cBeT67zE76EiGWjKKzDvm6IOm5P83sqM0Ij0wMJQSHp+QI6ZN7MLzb+4xfMPUEZ4q6CA==}
+    engines: {node: '>=20'}
+
+  preact@10.27.2:
+    resolution: {integrity: sha512-5SYSgFKSyhCbk6SrXyMpqjb5+MQBgfvEKE/OC+PujcY34sOpqtr+0AZQtPYx5IA6VxynQ7rUPCtKzyovpj9Bpg==}
+
   prettier@3.6.2:
     resolution: {integrity: sha512-I7AIg5boAr5R0FFtJ6rCfD+LFsWHp81dolrFD8S79U9tb8Az2nGrJncnMSnys+bpQJfRUzqs9hnA81OAA3hCuQ==}
     engines: {node: '>=14'}
@@ -2836,6 +2869,9 @@ packages:
         optional: true
       jsdom:
         optional: true
+
+  web-vitals@4.2.4:
+    resolution: {integrity: sha512-r4DIlprAGwJ7YM11VZp4R884m0Vmgr6EAKe3P+kO0PPj3Unqyvv59rczf6UiGcb9Z8QxZVcqKNwv/g0WNdWwsw==}
 
   webidl-conversions@3.0.1:
     resolution: {integrity: sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ==}
@@ -3607,6 +3643,8 @@ snapshots:
   '@pkgjs/parseargs@0.11.0':
     optional: true
 
+  '@posthog/core@1.2.2': {}
+
   '@protobufjs/aspromise@1.1.2': {}
 
   '@protobufjs/base64@1.1.2': {}
@@ -4166,6 +4204,8 @@ snapshots:
     optionalDependencies:
       react: 19.2.0
 
+  core-js@3.45.1: {}
+
   cron-parser@4.9.0:
     dependencies:
       luxon: 3.7.2
@@ -4355,6 +4395,8 @@ snapshots:
   fdir@6.5.0(picomatch@4.0.3):
     optionalDependencies:
       picomatch: 4.0.3
+
+  fflate@0.4.8: {}
 
   file-selector@2.1.2:
     dependencies:
@@ -4879,6 +4921,20 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
+  posthog-js@1.269.1:
+    dependencies:
+      '@posthog/core': 1.2.2
+      core-js: 3.45.1
+      fflate: 0.4.8
+      preact: 10.27.2
+      web-vitals: 4.2.4
+
+  posthog-node@5.9.2:
+    dependencies:
+      '@posthog/core': 1.2.2
+
+  preact@10.27.2: {}
+
   prettier@3.6.2: {}
 
   prop-types@15.8.1:
@@ -5261,7 +5317,7 @@ snapshots:
 
   ufo@1.6.1: {}
 
-  ultracite@5.5.0(@types/debug@4.1.12)(@types/node@24.6.2)(jiti@2.6.1)(lightningcss@1.30.1)(typescript@5.9.3):
+  ultracite@5.5.0(@types/debug@4.1.12)(@types/node@24.6.2)(typescript@5.9.3):
     dependencies:
       '@clack/prompts': 0.11.0
       '@trpc/server': 11.6.0(typescript@5.9.3)
@@ -5402,6 +5458,8 @@ snapshots:
       - terser
       - tsx
       - yaml
+
+  web-vitals@4.2.4: {}
 
   webidl-conversions@3.0.1: {}
 

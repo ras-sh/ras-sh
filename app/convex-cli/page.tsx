@@ -5,7 +5,7 @@ import { NPM_PREFIX } from "@/lib/constants";
 
 export default async function ConvexCliPage() {
   const preloadedStats = await preloadQuery(api.ossStats.getStats, {
-    library: "convex-cli",
+    tool: "convex-cli",
   });
 
   return (

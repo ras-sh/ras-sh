@@ -1,6 +1,9 @@
+"use client";
+
 import { SiGithub } from "@icons-pack/react-simple-icons";
 import Image from "next/image";
 import Link from "next/link";
+import posthog from "posthog-js";
 import icon from "@/app/icon.png";
 
 export function TopBar() {
@@ -23,6 +26,11 @@ export function TopBar() {
         <Link
           className="inline-flex items-center transition-opacity hover:opacity-80"
           href="https://github.com/ras-sh/ras-sh"
+          onClick={() => {
+            posthog.capture("github_link_clicked", {
+              location: "top_bar",
+            });
+          }}
           rel="noopener noreferrer"
           target="_blank"
         >

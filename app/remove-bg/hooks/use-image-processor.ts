@@ -1,3 +1,4 @@
+import posthog from "posthog-js";
 import { useCallback, useState } from "react";
 import {
   type BackgroundRemovalModel,
@@ -70,22 +71,41 @@ export function useImageProcessor(
         return;
       }
 
+      posthog.capture("remove_bg_processing_started", {
+        model: selectedModel,
+        fileSize: file.size,
+        fileType: file.type,
+      });
+
       try {
         const processed = await processImage(file);
         setProcessedImages([processed]); // Replace with single image
         setProgress(0);
+
+        posthog.capture("remove_bg_processing_completed", {
+          model: selectedModel,
+          fileSize: file.size,
+          fileType: file.type,
+          processingTime: processed.processingTime,
+        });
       } catch (error) {
         console.error(`Error processing ${file.name}:`, error);
+        posthog.captureException(error, {
+          model: selectedModel,
+          fileSize: file.size,
+          fileType: file.type,
+        });
       } finally {
         setProcessing(false);
         setProgress(0);
       }
     },
-    [processImage]
+    [processImage, selectedModel]
   );
 
   const clearAll = useCallback(() => {
     setProcessedImages([]);
+    posthog.capture("remove_bg_results_cleared");
   }, []);
 
   return {

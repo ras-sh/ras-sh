@@ -2,7 +2,7 @@ export const ORG = "ras-sh";
 export const GITHUB_PREFIX = `${ORG}/`;
 export const NPM_PREFIX = `@${ORG}/`;
 
-export const LIBRARIES = [
+export const TOOLS = [
   {
     id: "remove-bg",
     description:
@@ -16,4 +16,4 @@ export const LIBRARIES = [
   },
 ];
 
-export type Library = (typeof LIBRARIES)[number];
+export type Tool = (typeof TOOLS)[number];

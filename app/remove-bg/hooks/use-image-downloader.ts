@@ -1,3 +1,4 @@
+import posthog from "posthog-js";
 import { useCallback } from "react";
 
 const EXTENSION_REGEX = /\.[^/.]+$/;
@@ -39,6 +40,12 @@ export function useImageDownloader() {
         link.download = `no-bg-${baseFilename}.${extension}`;
         link.href = convertedDataUrl;
         link.click();
+
+        posthog.capture("remove_bg_image_downloaded", {
+          format,
+          width: img.width,
+          height: img.height,
+        });
       };
 
       img.src = dataUrl;

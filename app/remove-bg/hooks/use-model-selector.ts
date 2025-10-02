@@ -1,3 +1,4 @@
+import posthog from "posthog-js";
 import { useCallback, useState } from "react";
 import {
   type BackgroundRemovalModel,
@@ -13,10 +14,17 @@ export function useModelSelector() {
     async (model: BackgroundRemovalModel) => {
       setSelectedModel(model);
       setIsPreloading(true);
+
+      posthog.capture("remove_bg_model_selected", { model });
+
       try {
         await preloadBackgroundRemoval(model);
+        posthog.capture("remove_bg_model_preloaded", { model });
       } catch (error) {
         console.warn("Failed to preload model:", error);
+        posthog.captureException(error, {
+          model,
+        });
       } finally {
         setIsPreloading(false);
       }

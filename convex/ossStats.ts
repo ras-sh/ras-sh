@@ -1,12 +1,12 @@
 import { OssStats } from "@erquhart/convex-oss-stats";
 import { v } from "convex/values";
-import { GITHUB_PREFIX, LIBRARIES, NPM_PREFIX, ORG } from "../lib/constants";
+import { GITHUB_PREFIX, NPM_PREFIX, ORG, TOOLS } from "../lib/constants";
 import { components } from "./_generated/api";
 import { query } from "./_generated/server";
 
-const githubRepos = LIBRARIES.map((library) => `${GITHUB_PREFIX}${library.id}`);
-const npmPackages = LIBRARIES.filter((library) => library.hasNpmPackage).map(
-  (library) => `${NPM_PREFIX}${library.id}`
+const githubRepos = TOOLS.map((tool) => `${GITHUB_PREFIX}${tool.id}`);
+const npmPackages = TOOLS.filter((tool) => tool.hasNpmPackage).map(
+  (tool) => `${NPM_PREFIX}${tool.id}`
 );
 
 export const ossStats = new OssStats(components.ossStats, {
@@ -29,7 +29,7 @@ export const {
 
 export const getStats = query({
   args: {
-    library: v.string(),
+    tool: v.string(),
   },
   handler: async (ctx, args) => {
     let githubData: Awaited<ReturnType<typeof ossStats.getGithubRepo>> | null =
@@ -40,18 +40,18 @@ export const getStats = query({
     try {
       githubData = await ossStats.getGithubRepo(
         ctx,
-        `${GITHUB_PREFIX}${args.library}`
+        `${GITHUB_PREFIX}${args.tool}`
       );
     } catch {
       // Ignore error
     }
 
-    const libraryConfig = LIBRARIES.find((lib) => lib.id === args.library);
-    if (libraryConfig?.hasNpmPackage) {
+    const toolConfig = TOOLS.find((tool) => tool.id === args.tool);
+    if (toolConfig?.hasNpmPackage) {
       try {
         npmData = await ossStats.getNpmPackage(
           ctx,
-          `${NPM_PREFIX}${args.library}`
+          `${NPM_PREFIX}${args.tool}`
         );
       } catch {
         // Ignore error
