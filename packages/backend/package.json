@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@erquhart/convex-oss-stats": "catalog:",
-    "@ras-sh/convex-cli": "^0.1.3",
+    "@ras-sh/convex-cli": "workspace:*",
     "convex": "catalog:"
   },
   "devDependencies": {

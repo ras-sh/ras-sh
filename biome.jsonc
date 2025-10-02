@@ -2,27 +2,25 @@
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
   "extends": ["ultracite"],
   "files": {
-    "includes": ["**", "!**/*.css", "!packages/backend/convex/_generated"]
+    "includes": ["**", "!**/*.css", "!**/convex/_generated"]
   },
   "linter": {
     "rules": {
       "performance": {
         "noNamespaceImport": "off",
-        "noBarrelFile": "off",
-        "noImgElement": "off"
+        "noBarrelFile": "off"
+      },
+      "complexity": {
+        "noExcessiveCognitiveComplexity": "off"
       },
       "style": {
         "useFilenamingConvention": "off",
-        "useNamingConvention": "off",
         "noNestedTernary": "off",
         "noMagicNumbers": "off"
       },
       "suspicious": {
         "noConsole": "off",
         "noArrayIndexKey": "off"
-      },
-      "nursery": {
-        "useImageSize": "off"
       }
     }
   }

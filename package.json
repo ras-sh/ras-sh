@@ -4,12 +4,12 @@
   "private": true,
   "homepage": "https://ras.sh",
   "bugs": {
-    "url": "https://github.com/ras-sh/ras.sh/issues",
+    "url": "https://github.com/richardsolomou/ras.sh/issues",
     "email": "hi@ras.sh"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ras-sh/ras.sh"
+    "url": "https://github.com/richardsolomou/ras.sh"
   },
   "license": "MIT",
   "author": {
@@ -26,7 +26,7 @@
     "fix": "ultracite fix --unsafe"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.2.4",
+    "@biomejs/biome": "^2.2.5",
     "@ras-sh/typescript-config": "workspace:*",
     "@types/node": "catalog:",
     "lefthook": "^1.13.6",
