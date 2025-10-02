@@ -5,11 +5,6 @@ const nextConfig = {
   redirects() {
     return [
       {
-        source: "/stack",
-        destination: "https://www.npmjs.com/package/@ras-sh/stack",
-        permanent: false,
-      },
-      {
         source: "/remove-bg",
         destination: "https://remove-bg.ras.sh",
         permanent: false,

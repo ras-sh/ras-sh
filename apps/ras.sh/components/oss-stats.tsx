@@ -1,9 +1,9 @@
 "use client";
 
 import { useNpmDownloadCounter } from "@erquhart/convex-oss-stats/react";
-import type { api } from "@ras-sh/backend/convex/_generated/api";
 import { type Preloaded, usePreloadedQuery } from "convex/react";
 import { Download, Star } from "lucide-react";
+import type { api } from "@/convex/_generated/api";
 
 type OssStatsProps = {
   library: string;

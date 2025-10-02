@@ -5,7 +5,9 @@
   "private": true,
   "scripts": {
     "build": "next build --turbopack",
-    "dev": "next dev --turbopack",
+    "dev": "concurrently \"pnpm dev:frontend\" \"pnpm dev:backend\"",
+    "dev:frontend": "next dev --turbopack",
+    "dev:backend": "convex dev",
     "export": "pnpm build && next export -o _static",
     "start": "next start",
     "check-types": "tsc --noEmit"
@@ -13,7 +15,6 @@
   "dependencies": {
     "@erquhart/convex-oss-stats": "catalog:",
     "@icons-pack/react-simple-icons": "^13.8.0",
-    "@ras-sh/backend": "workspace:*",
     "@ras-sh/ui": "workspace:*",
     "convex": "catalog:",
     "lucide-react": "catalog:",
@@ -26,6 +27,7 @@
     "@types/node": "catalog:",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
+    "concurrently": "catalog:",
     "typescript": "catalog:"
   }
 }

@@ -1,6 +1,6 @@
 import { OssStats } from "@erquhart/convex-oss-stats";
 import { v } from "convex/values";
-import { GITHUB_PREFIX, LIBRARIES, NPM_PREFIX, ORG } from "../constants";
+import { GITHUB_PREFIX, LIBRARIES, NPM_PREFIX, ORG } from "../lib/constants";
 import { components } from "./_generated/api";
 import { query } from "./_generated/server";
 

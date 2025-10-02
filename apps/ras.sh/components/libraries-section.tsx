@@ -1,5 +1,5 @@
-import { LIBRARIES } from "@ras-sh/backend/constants";
 import { LibraryCard } from "@/components/library-card";
+import { LIBRARIES } from "@/lib/constants";
 
 export function LibrariesSection() {
   return (
